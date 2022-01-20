@@ -60,7 +60,7 @@ namespace QBIX_Test
                     this.Close();
                     return;
             }
-            ucEmployeeInfo.SetEmployeeInfo(this.departamentUid, this.emloyeeUid);
+            ucEmployeeInfo.SetEmployeeInfo(this.Employees);
         }
 
         private void simpleButtonCancel_Click(object sender, EventArgs e)
@@ -71,10 +71,10 @@ namespace QBIX_Test
 
         private void simpleButtonOk_Click(object sender, EventArgs e)
         {
-            var employeeInfo = ucEmployeeInfo.GetEmployeeInfo();
+            ucEmployeeInfo.GetEmployeeInfo();
 
-            this.Employees.EmployeeUid = employeeInfo.EmployeeUid;
-
+            //this.Employees.EmployeeUid = employeeInfo.EmployeeUid;
+            //this.Employees.Surname = employeeInfo.Surname;
 
             dbContext.Employees.SaveChange(this.Employees);
 

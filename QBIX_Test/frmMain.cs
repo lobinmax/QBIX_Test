@@ -259,7 +259,7 @@ namespace QBIX_Test
 
         private void btnEditEmployee_Click(object sender, EventArgs e)
         {
-            var dlg = new dlgEditPosition
+            var dlg = new dlgEditEmloyee
             (
                 DialogFormType.EditForm,
                 EmployeesUpdate,
