@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QbixTest" Class="QbixDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.101;Initial Catalog=QbixTest;User ID=lobin;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="QBIX_Test.Properties.Settings" SettingsPropertyName="QbixTestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Positions" Member="Positions">
+    <Type Name="Positions">
+      <Column Name="PositionUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepartamenUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Association Name="Positions_PositionSkills" Member="PositionSkills" ThisKey="PositionUid" OtherKey="PositionUid" Type="PositionSkills" />
+      <Association Name="Positions_Employees" Member="Employees" ThisKey="PositionUid" OtherKey="PositionUid" Type="Employees" />
+      <Association Name="Departaments_Positions" Member="Departaments" ThisKey="DepartamenUid" OtherKey="DepartamentUid" Type="Departaments" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeSkills" Member="EmployeeSkills">
+    <Type Name="EmployeeSkills">
+      <Column Name="EmployeeSkillUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmployeeUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SkillUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PositionSkills_EmployeeSkills" Member="PositionSkills" ThisKey="SkillUid" OtherKey="SkillUid" Type="PositionSkills" IsForeignKey="true" />
+      <Association Name="Employees_EmployeeSkills" Member="Employees" ThisKey="EmployeeUid" OtherKey="EmployeeUid" Type="Employees" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departaments" Member="Departaments">
+    <Type Name="Departaments">
+      <Column Name="DepartamentUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="Departaments_Positions" Member="Positions" ThisKey="DepartamentUid" OtherKey="DepartamenUid" Type="Positions" />
+      <Association Name="Departaments_Employees" Member="Employees" ThisKey="DepartamentUid" OtherKey="DepartamentUid" Type="Employees" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vEmployeesDs" Member="vEmployeesDs">
+    <Type Name="vEmployeesDs">
+      <Column Name="EmployeeUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DepartamentUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SNP" Type="System.String" DbType="VarChar(152) NOT NULL" CanBeNull="false" />
+      <Column Name="PositionName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DtHired" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DtDismissed" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PositionSkills" Member="PositionSkills">
+    <Type Name="PositionSkills">
+      <Column Name="SkillUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PositionUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="PositionSkills_EmployeeSkills" Member="EmployeeSkills" ThisKey="SkillUid" OtherKey="SkillUid" Type="EmployeeSkills" />
+      <Association Name="Positions_PositionSkills" Member="Positions" ThisKey="PositionUid" OtherKey="PositionUid" Type="Positions" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employees">
+      <Column Name="EmployeeUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepartamentUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PositionUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Patronymic" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DtOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="DtHired" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DtDismissed" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Room" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TabelianNumber" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Employees_EmployeeSkills" Member="EmployeeSkills" ThisKey="EmployeeUid" OtherKey="EmployeeUid" Type="EmployeeSkills" />
+      <Association Name="Departaments_Employees" Member="Departaments" ThisKey="DepartamentUid" OtherKey="DepartamentUid" Type="Departaments" IsForeignKey="true" />
+      <Association Name="Positions_Employees" Member="Positions" ThisKey="PositionUid" OtherKey="PositionUid" Type="Positions" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DeportamentDelete" Method="DeportamentDelete">
+    <Parameter Name="DeportamentUid" Parameter="deportamentUid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PositionDelete" Method="PositionDelete">
+    <Parameter Name="PositionUid" Parameter="positionUid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

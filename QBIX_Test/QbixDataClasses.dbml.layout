@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.75, 8.5" name="QbixDataClasses">
+  <DataContextMoniker Name="/QbixDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ae663370-e9c2-4960-923c-64c4841efe09" absoluteBounds="3.5, 3.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/Positions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="235b0fe9-716c-47b3-bcfa-dc22cc8a6fe9" absoluteBounds="3.515, 3.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af77b678-5fd8-4559-9e13-d8c3f7c96544" absoluteBounds="10.5, 6.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/EmployeeSkills" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf145ed1-2d71-4a14-a93f-b7f7386561b6" absoluteBounds="10.515, 6.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4e89de8-728c-4cc4-86a6-e618b31ccbb2" absoluteBounds="4.75, 1.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/Departaments" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b69b391a-3589-4ee3-822f-151d9964898c" absoluteBounds="4.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 2.81899251302083); (5.125 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/Departaments/Departaments_Positions" />
+      <nodes>
+        <classShapeMoniker Id="b4e89de8-728c-4cc4-86a6-e618b31ccbb2" />
+        <classShapeMoniker Id="ae663370-e9c2-4960-923c-64c4841efe09" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1cf69e2f-96b1-454d-9890-c203de86eabd" absoluteBounds="3.5, 6, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/vEmployeesDs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ca913e1-bd72-49c0-9d0b-10d378e8fc1e" absoluteBounds="3.515, 6.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8828781-fadd-47d6-bd64-f1cf0986a724" absoluteBounds="6.75, 5.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/PositionSkills" />
+      <nestedChildShapes>
+        <elementListCompartment Id="441d7634-8fb9-406d-a7cb-e299c4cfa34d" absoluteBounds="6.765, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 6.75564697265625); (10.5 : 6.75564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/PositionSkills/PositionSkills_EmployeeSkills" />
+      <nodes>
+        <classShapeMoniker Id="b8828781-fadd-47d6-bd64-f1cf0986a724" />
+        <classShapeMoniker Id="af77b678-5fd8-4559-9e13-d8c3f7c96544" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.03929768880208); (7.75 : 4.03929768880208); (7.75 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/Positions/Positions_PositionSkills" />
+      <nodes>
+        <classShapeMoniker Id="ae663370-e9c2-4960-923c-64c4841efe09" />
+        <classShapeMoniker Id="b8828781-fadd-47d6-bd64-f1cf0986a724" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" absoluteBounds="9.125, 2.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/QbixDataClassesDataContext/Employees" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7754ffa6-beea-4b98-8436-894257f63f92" absoluteBounds="9.14, 2.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.8125 : 6.00160970052083); (10.8125 : 6.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/Employees/Employees_EmployeeSkills" />
+      <nodes>
+        <classShapeMoniker Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" />
+        <classShapeMoniker Id="af77b678-5fd8-4559-9e13-d8c3f7c96544" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 2.0624995); (10.125 : 2.0624995); (10.125 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/Departaments/Departaments_Employees" />
+      <nodes>
+        <classShapeMoniker Id="b4e89de8-728c-4cc4-86a6-e618b31ccbb2" />
+        <classShapeMoniker Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.58214884440104); (9.125 : 3.58214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QbixDataClassesDataContext/Positions/Positions_Employees" />
+      <nodes>
+        <classShapeMoniker Id="ae663370-e9c2-4960-923c-64c4841efe09" />
+        <classShapeMoniker Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
