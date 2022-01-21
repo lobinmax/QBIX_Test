@@ -76,4 +76,17 @@
     <Parameter Name="PositionUid" Parameter="positionUid" Type="System.Guid" DbType="UniqueIdentifier" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.EmployeeSkillsChecked" Method="EmployeeSkillsChecked">
+    <Parameter Name="PositionUid" Parameter="positionUid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="EmployeeUid" Parameter="employeeUid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="EmployeeSkillsCheckedResult">
+      <Column Name="EmployeeSkillsBit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SkillUid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EmployeeDelete" Method="EmployeeDelete">
+    <Parameter Name="EmployeeUid" Parameter="employeeUid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

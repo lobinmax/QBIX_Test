@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -8,13 +9,14 @@ namespace QBIX_Test
     public partial class dlgEditEmloyee : XtraForm
     {
         private readonly Action<Guid?> actionAfterClose;
-        private Employees Employees;
+        //private Employees Employees;
         private readonly QbixDataClassesDataContext dbContext = new QbixDataClassesDataContext();
         private readonly DialogFormType dialogFormType;
         private readonly Guid? departamentUid;
         private readonly Guid? emloyeeUid;
 
-        public dlgEditEmloyee(DialogFormType dialogFormType, Action<Guid?> actionAfterClose, Guid? departamentUid, Guid? emloyeeUid)
+        public dlgEditEmloyee(
+            DialogFormType dialogFormType, Action<Guid?> actionAfterClose, Guid? departamentUid, Guid? emloyeeUid)
         {
             InitializeComponent();
 
@@ -29,10 +31,10 @@ namespace QBIX_Test
             switch (dialogFormType)
             {
                 case DialogFormType.AddForm:
-                    this.Employees = new Employees()
-                    {
-                        EmployeeUid = Guid.NewGuid()
-                    };
+                    //this.Employees = new Employees()
+                    //{
+                    //    EmployeeUid = Guid.NewGuid()
+                    //};
 
                     break;
 
@@ -44,9 +46,8 @@ namespace QBIX_Test
                         return;
                     }
 
-                    this.Employees = dbContext.Employees
-                        .SingleOrDefault(employees => employees.EmployeeUid == this.emloyeeUid);
-                    if (this.Employees == null)
+                    if (!dbContext.Employees
+                        .Any(employees => employees.EmployeeUid == this.emloyeeUid))
                     {
                         XtraMessageBox.Show("Не найден сотрудник для редактирования", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();
@@ -60,7 +61,7 @@ namespace QBIX_Test
                     this.Close();
                     return;
             }
-            ucEmployeeInfo.SetEmployeeInfo(this.Employees);
+            ucEmployeeInfo.SetEmployeeInfo(this.departamentUid, this.emloyeeUid);
         }
 
         private void simpleButtonCancel_Click(object sender, EventArgs e)
@@ -71,15 +72,10 @@ namespace QBIX_Test
 
         private void simpleButtonOk_Click(object sender, EventArgs e)
         {
-            ucEmployeeInfo.GetEmployeeInfo();
-
-            //this.Employees.EmployeeUid = employeeInfo.EmployeeUid;
-            //this.Employees.Surname = employeeInfo.Surname;
-
-            dbContext.Employees.SaveChange(this.Employees);
+            ucEmployeeInfo.SaveEmployeeInfo(out var employeeUid);
 
             this.Close();
-            actionAfterClose(this.Employees.EmployeeUid);
+            actionAfterClose(employeeUid);
         }
     }
 }

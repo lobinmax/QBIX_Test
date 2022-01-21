@@ -39,7 +39,7 @@
         <elementListCompartment Id="441d7634-8fb9-406d-a7cb-e299c4cfa34d" absoluteBounds="6.765, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.75 : 6.75564697265625); (10.5 : 6.75564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.75 : 6.75564697265625); (10.5 : 6.75564697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QbixDataClassesDataContext/PositionSkills/PositionSkills_EmployeeSkills" />
       <nodes>
         <classShapeMoniker Id="b8828781-fadd-47d6-bd64-f1cf0986a724" />
@@ -59,21 +59,21 @@
         <elementListCompartment Id="7754ffa6-beea-4b98-8436-894257f63f92" absoluteBounds="9.14, 2.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(10.8125 : 6.00160970052083); (10.8125 : 6.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.8125 : 6.00160970052083); (10.8125 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QbixDataClassesDataContext/Employees/Employees_EmployeeSkills" />
       <nodes>
         <classShapeMoniker Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" />
         <classShapeMoniker Id="af77b678-5fd8-4559-9e13-d8c3f7c96544" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.75 : 2.0624995); (10.125 : 2.0624995); (10.125 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.75 : 2.0624995); (10.125 : 2.0624995); (10.125 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QbixDataClassesDataContext/Departaments/Departaments_Employees" />
       <nodes>
         <classShapeMoniker Id="b4e89de8-728c-4cc4-86a6-e618b31ccbb2" />
         <classShapeMoniker Id="5be60344-f577-4ba7-8b5d-2db544fac8ae" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 3.58214884440104); (9.125 : 3.58214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.58214884440104); (9.125 : 3.58214884440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QbixDataClassesDataContext/Positions/Positions_Employees" />
       <nodes>
         <classShapeMoniker Id="ae663370-e9c2-4960-923c-64c4841efe09" />

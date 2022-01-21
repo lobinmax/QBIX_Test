@@ -28,6 +28,12 @@ namespace QBIX_Test
 
         private void dlgEditDepartament_Load(object sender, EventArgs e)
         {
+            if (!this.positionUid.HasValue)
+            {
+                XtraMessageBox.Show("Ошибка программиста. Не передан ИД должности", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
             switch (dialogFormType)
             {
                 case DialogFormType.AddForm:

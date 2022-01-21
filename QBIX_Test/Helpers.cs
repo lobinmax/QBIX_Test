@@ -104,8 +104,8 @@ namespace QBIX_Test
 
         public static void SaveChange<T>(this Table<T> linqTable, T obj) where T : class
         {
-            var singleOrDefault = linqTable.SingleOrDefault(arg => arg == obj);
-            if (singleOrDefault == null)
+            var existingObj= linqTable.SingleOrDefault(arg => arg == obj);
+            if (existingObj == null)
             {
                 linqTable.InsertOnSubmit(obj);
             }

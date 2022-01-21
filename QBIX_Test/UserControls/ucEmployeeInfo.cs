@@ -1,17 +1,17 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using DevExpress.Utils.Extensions;
-using DevExpress.XtraEditors.Controls;
+using System.Windows.Forms;
 
 namespace QBIX_Test
 {
     public partial class ucEmployeeInfo : XtraUserControl
     {
-        //[Browsable(false)] private QbixDataClassesDataContext dbContext;
-
+        private QbixDataClassesDataContext dbContext;
         [Browsable(false)] private bool mControlsReadOnly;
 
         [Browsable(true), Category("Qbix"), DisplayName("Qbix.ControlsReadOnly")]
@@ -38,34 +38,32 @@ namespace QBIX_Test
             }
         }
 
-        private Guid? EmployeeUid;
         private Employees employee;
 
         public ucEmployeeInfo()
         {
             InitializeComponent();
+
+            dtBirth.EditValue = DateTime.Today;
+            dtHired.EditValue = DateTime.Today;
         }
 
         public void SetEmployeeInfo(Guid? departamentUid, Guid? employeeUid)
         {
-            this.EmployeeUid = employeeUid ?? Guid.NewGuid();
-
-            var dbContext = new QbixDataClassesDataContext();
-            var employee = dbContext.Employees.SingleOrDefault(employees => employees.EmployeeUid == employeeUid);
-
-            FillPositions(employee?.DepartamentUid);
-            DataToControl(employee);
-
-            txtLastName.Select();
-        }
-
-        public void SetEmployeeInfo(Employees employee)
-        {
-            this.employee = employee;
-
-            FillPositions(employee?.DepartamentUid);
-            DataToControl(employee);
-
+            this.dbContext = new QbixDataClassesDataContext();
+            FillPositions(departamentUid);
+            if (employeeUid.HasValue)
+            {
+                this.employee = dbContext.Employees.SingleOrDefault(employees => employees.EmployeeUid == employeeUid);
+                DataToControl(employee);
+            }
+            else
+            {
+                this.employee = new Employees() {EmployeeUid = Guid.NewGuid(), DepartamentUid = departamentUid.Value };
+                ClearControls();
+                luPosition.ItemIndex = 0;
+            }
+            luPosition_EditValueChanged(this.luPosition, EventArgs.Empty);
             txtLastName.Select();
         }
 
@@ -77,9 +75,9 @@ namespace QBIX_Test
                 return;
             }
 
-            var dbContext = new QbixDataClassesDataContext();
-            luPosition.Properties.DataSource = dbContext.Positions
-                .Where(positions => positions.DepartamenUid == departamentUid).ToList();
+            var depPositions = dbContext.Positions.Where(positions => positions.DepartamenUid == departamentUid).ToList();
+
+            luPosition.Properties.DataSource = depPositions;
             luPosition.Properties.ValueMember = "PositionUid";
             luPosition.Properties.KeyMember = "PositionUid";
             luPosition.Properties.DisplayMember = "Name";
@@ -88,6 +86,12 @@ namespace QBIX_Test
             foreach (LookUpColumnInfo propertiesColumn in luPosition.Properties.Columns)
             {
                 propertiesColumn.Visible = (propertiesColumn.FieldName == "Name");
+            }
+
+            if (!depPositions.Any())
+            {
+                luPosition.Properties.DataSource = null;
+                luPosition.EditValue = null;
             }
         }
 
@@ -119,18 +123,19 @@ namespace QBIX_Test
             txtName.EditValue = null;
             txtPatronymic.EditValue = null;
             txtAddress.EditValue = null;
-            dtBirth.EditValue = null;
-            dtHired.EditValue = null;
+            dtBirth.EditValue = DateTime.Today;
+            dtHired.EditValue = DateTime.Today;
             dtDismissed.EditValue = null;
             txtPhone.EditValue = null;
             txtEmail.EditValue = null;
             txtRoom.EditValue = null;
-            txtTabelianNumber.EditValue = null;
+            txtTabelianNumber.EditValue = null; 
+            luPosition.EditValue = null; 
         }
 
-        public Employees GetEmployeeInfo(bool validateData = true)
+        public Guid? SaveEmployeeInfo(out Guid? employeeUid, bool validateData = true)
         {
-            var employeeInfo = new Employees();
+            employeeUid = this.employee.EmployeeUid;
 
             if (validateData && 
                 txtLastName.EditValue.CustomValue().IsNullOrEmptyOrWhiteSpace() ||
@@ -138,10 +143,15 @@ namespace QBIX_Test
                 txtPatronymic.EditValue.CustomValue().IsNullOrEmptyOrWhiteSpace() ||
                 !luPosition.EditValue.CustomValue<Guid>().HasValue)
             {
-                throw new Exception("Не все обязательные поля заполнены.");
+                XtraMessageBox.Show("Не все обязательные поля заполнены.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return employeeUid;
             }
 
-            //employeeInfo.EmployeeUid = this.employee.EmployeeUid;
+            if (luPosition.EditValue.CustomValueNn<Guid>() != this.employee.PositionUid)
+            {
+                dbContext.EmployeeSkills.DeleteAllOnSubmit(employee.EmployeeSkills);
+            }
+
             this.employee.Surname = txtLastName.EditValue.CustomValue();
             this.employee.Name = txtName.EditValue.CustomValue();
             this.employee.Patronymic = txtPatronymic.EditValue.CustomValue();
@@ -154,18 +164,55 @@ namespace QBIX_Test
             this.employee.Room = txtRoom.EditValue.CustomValue();
             this.employee.TabelianNumber = txtTabelianNumber.EditValue.CustomValue();
             this.employee.PositionUid = luPosition.EditValue.CustomValueNn<Guid>();
-
-            foreach (var lbSkillsCheckedItem in lbSkills.CheckedItems)
+            
+            var dsSkills = (List<EmployeeSkillsCheckedResult>)lbSkills.DataSource;
+            foreach (var lbSkillsItem in dsSkills)
             {
-                employeeInfo.EmployeeSkills.Add((EmployeeSkills) lbSkillsCheckedItem);
+                var checkenSkill = dbContext.PositionSkills
+                    .SingleOrDefault(skills => skills.SkillUid == lbSkillsItem.SkillUid.CustomValue<Guid>());
+
+                if (lbSkillsItem.EmployeeSkillsBit.Value &&
+                    this.employee.EmployeeSkills.All(skills => skills.SkillUid != checkenSkill?.SkillUid))
+                {
+                    this.employee.EmployeeSkills.Add
+                    (
+                        new EmployeeSkills()
+                        {
+                            EmployeeSkillUid = Guid.NewGuid(),
+                            EmployeeUid = this.employee.EmployeeUid,
+                            SkillUid = lbSkillsItem.SkillUid
+                        }
+                    );
+                    continue;
+                }
+
+                if (!lbSkillsItem.EmployeeSkillsBit.Value)
+                {
+                    var delEmployeeSkill =
+                        this.employee.EmployeeSkills.SingleOrDefault(
+                            skills => skills.SkillUid == checkenSkill?.SkillUid);
+                    if (delEmployeeSkill != null)
+                    {
+                        dbContext.EmployeeSkills.DeleteOnSubmit(delEmployeeSkill);
+                    }
+                }
             }
 
-            return employeeInfo;
+            dbContext.Employees.SaveChange(this.employee);
+            return employeeUid;
         }
 
         private void luPosition_EditValueChanged(object sender, EventArgs e)
         {
-             //luPosition.EditValue;
+            var selectedPositionUid = luPosition.EditValue.CustomValue<Guid>();
+            if (!selectedPositionUid.HasValue)
+            {
+                lbSkills.DataSource = null;
+                return;
+            }
+
+            lbSkills.DataSource =
+                dbContext.EmployeeSkillsChecked(luPosition.EditValue.CustomValue<Guid>(), this.employee?.EmployeeUid).ToList();
         }
     }
 }

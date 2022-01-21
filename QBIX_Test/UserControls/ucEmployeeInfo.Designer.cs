@@ -29,32 +29,6 @@ namespace QBIX_Test
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucEmployeeInfo));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -70,17 +44,39 @@ namespace QBIX_Test
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucEmployeeInfo));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gcBasicInfo = new DevExpress.XtraEditors.GroupControl();
             this.dtBirth = new DevExpress.XtraEditors.DateEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress = new QBIX_Test.QbixButtonEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPatronymic = new QBIX_Test.QbixButtonEdit();
-            this.txtName = new QBIX_Test.QbixButtonEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLastName = new QBIX_Test.QbixButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lbSkills = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.luPosition = new DevExpress.XtraEditors.LookUpEdit();
@@ -96,14 +92,14 @@ namespace QBIX_Test
             this.txtRoom = new QBIX_Test.QbixButtonEdit();
             this.txtEmail = new QBIX_Test.QbixButtonEdit();
             this.txtPhone = new QBIX_Test.QbixButtonEdit();
+            this.txtPatronymic = new QBIX_Test.QbixButtonEdit();
+            this.txtName = new QBIX_Test.QbixButtonEdit();
+            this.txtLastName = new QBIX_Test.QbixButtonEdit();
+            this.txtAddress = new QBIX_Test.QbixButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcBasicInfo)).BeginInit();
             this.gcBasicInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtBirth.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtBirth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPatronymic.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbSkills)).BeginInit();
@@ -116,15 +112,19 @@ namespace QBIX_Test
             ((System.ComponentModel.ISupportInitialize)(this.txtRoom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPatronymic.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gcBasicInfo
             // 
             this.gcBasicInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcBasicInfo.Controls.Add(this.txtAddress);
             this.gcBasicInfo.Controls.Add(this.dtBirth);
             this.gcBasicInfo.Controls.Add(this.labelControl11);
-            this.gcBasicInfo.Controls.Add(this.txtAddress);
             this.gcBasicInfo.Controls.Add(this.labelControl4);
             this.gcBasicInfo.Controls.Add(this.txtPatronymic);
             this.gcBasicInfo.Controls.Add(this.txtName);
@@ -160,17 +160,6 @@ namespace QBIX_Test
             this.labelControl11.TabIndex = 16;
             this.labelControl11.Text = "<color=red>* </color>Дата рождения:";
             // 
-            // txtAddress
-            // 
-            this.txtAddress.EnterMoveNextControl = true;
-            this.txtAddress.Location = new System.Drawing.Point(91, 140);
-            this.txtAddress.Name = "txtAddress";
-            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
-            this.txtAddress.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtAddress.Size = new System.Drawing.Size(409, 20);
-            this.txtAddress.TabIndex = 8;
-            // 
             // labelControl4
             // 
             this.labelControl4.AllowHtmlString = true;
@@ -179,28 +168,6 @@ namespace QBIX_Test
             this.labelControl4.Size = new System.Drawing.Size(35, 13);
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "Адрес:";
-            // 
-            // txtPatronymic
-            // 
-            this.txtPatronymic.EnterMoveNextControl = true;
-            this.txtPatronymic.Location = new System.Drawing.Point(91, 103);
-            this.txtPatronymic.Name = "txtPatronymic";
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.txtPatronymic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtPatronymic.Size = new System.Drawing.Size(164, 20);
-            this.txtPatronymic.TabIndex = 6;
-            // 
-            // txtName
-            // 
-            this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(91, 68);
-            this.txtName.Name = "txtName";
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.txtName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtName.Size = new System.Drawing.Size(164, 20);
-            this.txtName.TabIndex = 5;
             // 
             // labelControl3
             // 
@@ -229,17 +196,6 @@ namespace QBIX_Test
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "<color=red>* </color>Фамилия:";
             // 
-            // txtLastName
-            // 
-            this.txtLastName.EnterMoveNextControl = true;
-            this.txtLastName.Location = new System.Drawing.Point(91, 35);
-            this.txtLastName.Name = "txtLastName";
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
-            this.txtLastName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtLastName.Size = new System.Drawing.Size(164, 20);
-            this.txtLastName.TabIndex = 1;
-            // 
             // groupControl1
             // 
             this.groupControl1.AllowHtmlText = true;
@@ -256,12 +212,13 @@ namespace QBIX_Test
             this.lbSkills.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSkills.CheckMember = "EmployeeSkillsBit";
             this.lbSkills.DisplayMember = "Name";
             this.lbSkills.Location = new System.Drawing.Point(5, 52);
             this.lbSkills.Name = "lbSkills";
             this.lbSkills.Size = new System.Drawing.Size(233, 145);
             this.lbSkills.TabIndex = 20;
-            this.lbSkills.ValueMember = "EmployeeSkillUid";
+            this.lbSkills.ValueMember = "SkillUid";
             // 
             // luPosition
             // 
@@ -271,6 +228,8 @@ namespace QBIX_Test
             this.luPosition.Name = "luPosition";
             this.luPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luPosition.Properties.NullText = "";
+            this.luPosition.Properties.NullValuePrompt = "Выберите должность";
             this.luPosition.Properties.ShowHeader = false;
             this.luPosition.Size = new System.Drawing.Size(233, 20);
             this.luPosition.TabIndex = 14;
@@ -360,9 +319,9 @@ namespace QBIX_Test
             this.txtTabelianNumber.EnterMoveNextControl = true;
             this.txtTabelianNumber.Location = new System.Drawing.Point(338, 379);
             this.txtTabelianNumber.Name = "txtTabelianNumber";
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
             this.txtTabelianNumber.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtTabelianNumber.Size = new System.Drawing.Size(170, 20);
             this.txtTabelianNumber.TabIndex = 19;
             // 
@@ -371,9 +330,9 @@ namespace QBIX_Test
             this.txtRoom.EnterMoveNextControl = true;
             this.txtRoom.Location = new System.Drawing.Point(338, 348);
             this.txtRoom.Name = "txtRoom";
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
             this.txtRoom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtRoom.Size = new System.Drawing.Size(170, 20);
             this.txtRoom.TabIndex = 13;
             // 
@@ -382,9 +341,9 @@ namespace QBIX_Test
             this.txtEmail.EnterMoveNextControl = true;
             this.txtEmail.Location = new System.Drawing.Point(338, 316);
             this.txtEmail.Name = "txtEmail";
-            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
+            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
             this.txtEmail.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtEmail.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtEmail.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txtEmail.Properties.MaskSettings.Set("mask", "[0-9a-zA-Z]{2,}@[a-z]{4,8}.[ru|net|com]{2,3}");
@@ -396,14 +355,58 @@ namespace QBIX_Test
             this.txtPhone.EnterMoveNextControl = true;
             this.txtPhone.Location = new System.Drawing.Point(338, 283);
             this.txtPhone.Name = "txtPhone";
-            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
+            editorButtonImageOptions8.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions8.Image")));
             this.txtPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtPhone.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
             this.txtPhone.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             this.txtPhone.Properties.MaskSettings.Set("mask", "\\+\\7 \\(\\d\\d\\d)\\ \\d\\d\\d\\-\\d\\d\\-\\d\\d");
             this.txtPhone.Size = new System.Drawing.Size(170, 20);
             this.txtPhone.TabIndex = 11;
+            // 
+            // txtPatronymic
+            // 
+            this.txtPatronymic.EnterMoveNextControl = true;
+            this.txtPatronymic.Location = new System.Drawing.Point(91, 103);
+            this.txtPatronymic.Name = "txtPatronymic";
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.txtPatronymic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtPatronymic.Size = new System.Drawing.Size(164, 20);
+            this.txtPatronymic.TabIndex = 6;
+            // 
+            // txtName
+            // 
+            this.txtName.EnterMoveNextControl = true;
+            this.txtName.Location = new System.Drawing.Point(91, 68);
+            this.txtName.Name = "txtName";
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            this.txtName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtName.Size = new System.Drawing.Size(164, 20);
+            this.txtName.TabIndex = 5;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.EnterMoveNextControl = true;
+            this.txtLastName.Location = new System.Drawing.Point(91, 35);
+            this.txtLastName.Name = "txtLastName";
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            this.txtLastName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtLastName.Size = new System.Drawing.Size(164, 20);
+            this.txtLastName.TabIndex = 1;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.EnterMoveNextControl = true;
+            this.txtAddress.Location = new System.Drawing.Point(91, 140);
+            this.txtAddress.Name = "txtAddress";
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.txtAddress.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Очистить поле", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtAddress.Size = new System.Drawing.Size(409, 20);
+            this.txtAddress.TabIndex = 18;
             // 
             // ucEmployeeInfo
             // 
@@ -430,10 +433,6 @@ namespace QBIX_Test
             this.gcBasicInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtBirth.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtBirth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPatronymic.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lbSkills)).EndInit();
@@ -446,6 +445,10 @@ namespace QBIX_Test
             ((System.ComponentModel.ISupportInitialize)(this.txtRoom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPatronymic.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,7 +457,6 @@ namespace QBIX_Test
         #endregion
 
         private DevExpress.XtraEditors.GroupControl gcBasicInfo;
-        private QbixButtonEdit txtAddress;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private QbixButtonEdit txtPatronymic;
         private QbixButtonEdit txtName;
@@ -479,5 +481,6 @@ namespace QBIX_Test
         private DevExpress.XtraEditors.CheckedListBoxControl lbSkills;
         private DevExpress.XtraEditors.DateEdit dtBirth;
         private DevExpress.XtraEditors.LabelControl labelControl11;
+        private QbixButtonEdit txtAddress;
     }
 }

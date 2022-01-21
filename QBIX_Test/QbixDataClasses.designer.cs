@@ -138,6 +138,20 @@ namespace QBIX_Test
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), positionUid);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EmployeeSkillsChecked")]
+		public ISingleResult<EmployeeSkillsCheckedResult> EmployeeSkillsChecked([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PositionUid", DbType="UniqueIdentifier")] System.Nullable<System.Guid> positionUid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmployeeUid", DbType="UniqueIdentifier")] System.Nullable<System.Guid> employeeUid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), positionUid, employeeUid);
+			return ((ISingleResult<EmployeeSkillsCheckedResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EmployeeDelete")]
+		public int EmployeeDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmployeeUid", DbType="UniqueIdentifier")] System.Nullable<System.Guid> employeeUid)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), employeeUid);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Positions")]
@@ -1482,6 +1496,68 @@ namespace QBIX_Test
 		{
 			this.SendPropertyChanging();
 			entity.Employees = null;
+		}
+	}
+	
+	public partial class EmployeeSkillsCheckedResult
+	{
+		
+		private System.Nullable<bool> _EmployeeSkillsBit;
+		
+		private System.Guid _SkillUid;
+		
+		private string _Name;
+		
+		public EmployeeSkillsCheckedResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeSkillsBit", DbType="Bit")]
+		public System.Nullable<bool> EmployeeSkillsBit
+		{
+			get
+			{
+				return this._EmployeeSkillsBit;
+			}
+			set
+			{
+				if ((this._EmployeeSkillsBit != value))
+				{
+					this._EmployeeSkillsBit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SkillUid", DbType="UniqueIdentifier NOT NULL")]
+		public System.Guid SkillUid
+		{
+			get
+			{
+				return this._SkillUid;
+			}
+			set
+			{
+				if ((this._SkillUid != value))
+				{
+					this._SkillUid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
 		}
 	}
 }

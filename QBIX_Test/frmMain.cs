@@ -11,7 +11,7 @@ namespace QBIX_Test
         private Departaments GetFocuseDepartament => gridViewDepartaments.GetEntityFromFocusRow<Departaments>();
         private Positions GetFocusePosition => gridViewPositions.GetEntityFromFocusRow<Positions>();
         private vEmployeesDs GetFocuseEmployee => gridViewEmployees.GetEntityFromFocusRow<vEmployeesDs>();
-        private PositionSkills GetFocusePositionSkills => (PositionSkills) lbPositionSkills.SelectedItem ?? null;
+        private PositionSkills GetFocusePositionSkills => (PositionSkills) lbPositionSkills.SelectedItem;
 
         public frmMain()
         {
@@ -49,11 +49,12 @@ namespace QBIX_Test
 
         private void btnEditDepartament_Click(object sender, EventArgs e)
         {
+            if (this.GetFocuseDepartament == null) { return; }
             var dlg = new dlgEditDepartament
             (
                 DialogFormType.EditForm,
                 DepartamentsUpdate,
-                this.GetFocuseDepartament.DepartamentUid
+                this.GetFocuseDepartament?.DepartamentUid
             );
             dlg.ShowDialog();
         }
@@ -120,6 +121,7 @@ namespace QBIX_Test
 
         private void btnEditPosition_Click(object sender, EventArgs e)
         {
+            if (this.GetFocusePosition == null) { return; }
             var dlg = new dlgEditPosition
             (
                 DialogFormType.EditForm,
@@ -163,11 +165,12 @@ namespace QBIX_Test
 
         private void btnAddPositionSkill_Click()
         {
+            if (this.GetFocusePosition == null) { return; }
             var dlg = new dlgEditPositionSkill
             (
                 DialogFormType.AddForm,
                 PositionSkillsUpdate,
-                this.GetFocusePosition?.PositionUid,
+                this.GetFocusePosition.PositionUid,
                 null
             );
             dlg.ShowDialog();
@@ -175,6 +178,7 @@ namespace QBIX_Test
 
         private void btnEditPositionSkill_Click()
         {
+            if (this.GetFocusePositionSkills == null) { return; }
             var dlg = new dlgEditPositionSkill
             (
                 DialogFormType.EditForm,
@@ -259,24 +263,34 @@ namespace QBIX_Test
 
         private void btnEditEmployee_Click(object sender, EventArgs e)
         {
+            if (this.GetFocuseEmployee == null) { return; }
             var dlg = new dlgEditEmloyee
             (
                 DialogFormType.EditForm,
                 EmployeesUpdate,
                 this.GetFocuseDepartament?.DepartamentUid,
-                this.GetFocuseEmployee?.EmployeeUid
+                this.GetFocuseEmployee.EmployeeUid
             );
             dlg.ShowDialog();
         }
 
         private void btnDelEmployee_Click(object sender, EventArgs e)
         {
+            if (this.GetFocuseEmployee == null ||
+                XtraMessageBox.Show($"Сотрудник '{this.GetFocusePosition.Name}' и все связанные с ним данные будут удалены.{Environment.NewLine}" +
+                                    $"Вы согласны?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                DialogResult.Yes) return;
 
+            var dbContext = new QbixDataClassesDataContext();
+            dbContext.EmployeeDelete(this.GetFocuseEmployee?.EmployeeUid);
+
+            EmployeesUpdate();
         }
 
         private void gridViewEmployees_SelectionChanged()
         {
-            ucEmployeeInfo.SetEmployeeInfo(this.GetFocuseDepartament?.DepartamentUid, this.GetFocuseEmployee?.EmployeeUid);
+            if (this.GetFocuseDepartament == null) { return; }
+            ucEmployeeInfo.SetEmployeeInfo(this.GetFocuseDepartament.DepartamentUid, this.GetFocuseEmployee?.EmployeeUid);
         }
 
     }
